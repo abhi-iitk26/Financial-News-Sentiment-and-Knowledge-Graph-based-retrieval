@@ -1,0 +1,364 @@
+\documentclass[11pt, a4paper]{extarticle}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{array}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{bibentry}
+\nobibliography*
+\usepackage{romannum}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex, hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+\usepackage[charter]{mathdesign}
+
+% tighter lists
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=0pt, partopsep=0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\usepackage[margin=0.3in]{geometry}
+\addtolength{\parskip}{0.3mm}
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% -------- Section formatting (reduced space) --------
+\titleformat{\section}
+{\scshape\raggedright\large}
+{}{0em}{}
+[\color{black}\titlerule\vspace{-6pt}]
+
+\titlespacing*{\section}
+{0pt}{4pt}{4pt}
+
+% -------- Custom commands --------
+\newcommand{\resumeItem}[2]{
+  \item\small{\textbf{#1}{: #2}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item[]
+  \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}
+}
+
+\newcommand{\shorterSection}[1]{\section{#1}}
+
+% -------- Document --------
+\renewcommand{\baselinestretch}{1.0}
+
+\begin{document}
+\fontsize{10pt}{12pt}\selectfont
+
+% ---------- HEADING ----------
+\begin{flushleft}
+{\huge\textbf{Abhishek Tiwari}}
+\end{flushleft}
+\vspace{-4pt}
+
+Department of Management Sciences \hfill
+\href{mailto:abhitiwari24@iitk.ac.in}{\faEnvelope\ abhitiwari24@iitk.ac.in} |
+\href{tel:6204481709}{\faPhone\ +91-6204481709}
+
+\\Indian Institute of Technology, Kanpur \hfill
+\href{https://github.com/abhi-iitk26}{\faGithub\ abhishekiitk} |
+\href{https://www.linkedin.com/in/abhishek-tiwari-43403021b/}{\faLinkedinSquare\ Abhishek Tiwari}
+
+\vspace{2pt}
+\rule{\textwidth}{1pt}
+
+%-----------EDUCATION-----------------
+\shorterSection{Education}
+\begin{center}
+\begin{tabular}{|p{2.5cm}|p{7.0cm}|p{7.5cm}|p{2.0cm}|}
+\hline
+\centering{\textbf{Year}} & \centering{\textbf{Degree/Certificate}} & \centering{\textbf{Institute}} & \ \ \ \ \ \ \textbf{CPI/$\%$}\\
+\hline
+\centering{2024-Present} & \centering{M.Tech (DoMS)} & \centering{Indian Institute of Technology, Kanpur} & \ \ \ \ \ 8.67/10\\
+\hline
+\centering{2018-2022} & \centering{B.Tech} & \centering{ AKTU, Lucknow} & \ \ \ \ \  7.29/10\\
+\hline
+\centering{2013-2015} & \centering{Higher Secondary Education | UP Board} & \centering{Hindu Inter College, Ghazipur} & \ \ \ \ \ 84.6 \%\\
+\hline
+\centering{2011-2013} & \centering{Secondary Education} & \centering{Amar Shahid High School, Ghazipur} & \ \ \ \ \ 85.17 \%\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{-4mm}
+
+%-----------Internship-----------------
+\shorterSection{Internship}
+\vspace{-2pt}
+
+\item 
+{\textbf{RAG BASED CHATBOT | AI ENGINEER (INTERN) | KUSUMGAR PVT. LTD.}}
+        \hfill (May'25 - Jul'25)
+        \\[-0.6cm]
+    \begin{itemize}
+          \item[$\circ$] Automated manual search across \textbf{multiple Excel logs} \& {ERP data} by building a \textbf{RAG-based internal knowledge assistant}.\\[-0.55cm]
+          
+          \item[$\circ$] Cleaned and normalized \textbf{200K+ manufacturing Excel logs} containing abbreviations, nested tables, reused codes, and inconsistencies using an \textbf{automated ingestion pipeline} to generate well-structured \textbf{metadata-rich JSON chunks}.
+          \item[$\circ$] Developed \textbf{parameter-aware hybrid retrieval} (keyword, semantic, metadata) using \textbf{Dockerized Weaviate} for vector search.\\[-0.55cm]
+
+          
+          \item[$\circ$] Built a \textbf{Streamlit interface} enabling top-20 \textbf{context-valid chunk retrieval in <2s} with \textbf{30+ adaptive prompt templates}.\\[-0.55cm]
+          
+          \item[$\circ$] Deployed \textbf{Streamlit UI} handling \textbf{top-20 chunks retrieval} in \textbf{<2s} and used \textbf{30 templates} for context-aware response generation.\\[-0.55cm]
+          
+          \item[$\circ$] \textbfEvaluated Evaluated system reliability using the \textbf{RAGAs framework}, achieving \textbf{0.91 Faithfulness} and \textbf{0.88 Answer Correctness}, improving trust in LLM-assisted decisions.
+
+
+    \end{itemize}
+\medskip
+
+
+%-----------PROJECT-----------------
+\shorterSection{Projects}
+\vspace{-2pt}
+\begin{itemize}[leftmargin=*]
+\vspace{1mm}
+
+
+%------------------ INTELLIGENT STOCK ANALYSIS ------------------
+\vspace{1mm}
+\item \href{https://github.com/abhi-iitk26/Instagram_multiagentic_ai_project}{\textbf{AGENTIC AI SYSTEM FOR INSTAGRAM CONTENT STRATEGY \& CREATION -}} \href{https://github.com/abhi-iitk26/Instagram_multiagentic_ai_project} {\faGithub}
+{, Self-Project} \hfill(Aug'25) \\[-0.6cm]
+\vspace{5mm}
+
+\begin{itemize}[leftmargin=15pt]
+    \item[$\circ$] Built a \textbf{multi-agent AI system} to automate Instagram content research, planning, and creation from user-defined topics.  
+    \item[$\circ$] Designed \textbf{agents} for market research, content planning, visual generation, and caption writing in a coordinated workflow.
+    \item[$\circ$] Integrated \textbf{Serper},  \textbf{LangChain}, \textbf{WebBaseLoader}, and \textbf{OpenAI GPT-3.5 API} for web data extraction and content generation.
+    \item[$\circ$] Improved efficiency \& consistency of \textbf{social media marketing tasks} by delivering production-ready Instagram content at scale.
+\end{itemize}
+
+
+%------------------ SENTIMENT ANALYSIS ------------------
+\vspace{1mm}
+\item
+\href{https://github.com/abhi-iitk26/-AD-RECOMMENDATION-SYSTEM-USING-HYBRID-AI-TECHNIQUES-}{\textbf{FINGRAPH: GRAPH-BASED FINANCIAL INFORMATION RETRIEVAL | NLP - }}\href{https://github.com/abhi-iitk26/-AD-RECOMMENDATION-SYSTEM-USING-HYBRID-AI-TECHNIQUES-}{\faGithub}
+{, Self Project} \hfill(Mar'25) \\[-0.6cm]
+\vspace{5mm}
+\begin{itemize}[leftmargin=15pt]
+    \item[$\circ$] Built an end-to-end system to retrieve financial information and sentiment from unstructured financial news articles.
+    \item[$\circ$] Preprocessed \textbf{5,800+ articles} using NLTK and TF-IDF, training ML models with \textbf{0.71 F1-score} using Logistic Regression.
+    \item[$\circ$] Trained deep learning models (\textbf{LSTM, Bi-LSTM, GRU}) with Word2Vec embeddings, achieving \textbf{72\% accuracy} with Bi-LSTM.
+    \item[$\circ$] Implemented \textbf{Named Entity Recognition} using spaCy \& deployed a \textbf{Neo4j knowledge graph} with \textbf{Dockerized Streamlit UI}.
+\end{itemize}
+
+
+%------------------ REAL-TIME FACE RECOGNITION ------------------
+\vspace{1mm}
+\item
+\href{https://github.com/abhi-iitk26/Real_Time_face_Recognisation}{\textbf{REAL-TIME FACE RECOGNITION \& ATTENDANCE SYSTEM | Computer Vision -  }}\href{https://github.com/abhi-iitk26/Real_Time_face_Recognisation}{\faGithub}
+{, Course Project: AML} \hfill (May'25)\\[-0.6cm]
+\vspace{5mm}
+\begin{itemize}[leftmargin=15pt]
+    \item[$\circ$] Built an automated face recognition system to replace manual attendance tracking and improve operational efficiency.
+    \item[$\circ$] Processed facial data for \textbf{582 individuals} using preprocessing \& augmentation, generating \textbf{512-D FaceNet embeddings}.
+    \item[$\circ$] Designed an \textbf{SVM-based recognition engine} with cosine similarity to accurately identify known users and flag unknown faces.  
+    \item[$\circ$] A real-time application with attendance logging and unknown capture, achieving \textbf{89\% accuracy} (FAR 4.5\%, FRR 7.5\%).
+
+\end{itemize}
+
+
+
+%------------------ SALES ANALYSIS USING MULTIVARIATE REGRESSION ------------------
+\vspace{1mm}
+\item
+\href{https://github.com/abhi-iitk26/Dynamic_credit_limit_modelling}{\textbf{DYNAMIC CREDIT LIMIT MODELLING | Risk Analytics - }}\href{https://github.com/abhi-iitk26/Dynamic_credit_limit_modelling}{\faGithub}
+{, Course Project: SMBA} \hfill(Nov'24) \\[-0.6cm]
+\vspace{5mm}
+\begin{itemize}[leftmargin=15pt]
+   
+   
+    \item[$\circ$] Built a data-driven credit limit adjustment system to support risk-aware lending decisions using \textbf{30K+ customer records}.
+    \item[$\circ$] Performed \textbf{data wrangling}, \textbf{feature selection (Chi-Square, ANOVA, VIF)}, \textbf{SMOTE balancing}, and label/one-hot encoding.
+    \item[$\circ$] Built models with \textbf{Logistic Regression, Decision Trees, SVC}, \& ensemble methods including \textbf{Random Forest} and \textbf{XGBoost}.
+ 
+    
+    \item[$\circ$] Achieved \textbf{81\%} accuracy on the \textbf{XGBoost} classifier through \textbf{hyperparameter tuning} with \textbf{GridSearch CV} for optimal results.
+\end{itemize}
+\end{itemize}
+
+\medskip
+
+%-----------WORK EXPERIENCE-----------------
+\shorterSection{Work Experience}
+\vspace{-2pt}
+
+\item 
+{\textbf{SUSTAINABILITY ANALYST | VARDHMAN PVT. LTD.}}
+        \hfill (Aug'22 - Jun'24)
+        \\[-0.6cm]
+    \begin{itemize}
+          \item[$\circ$] Translated the ESG data into actionable insights, applying data analysis to identify consumption trends \& drive optimization.
+       \item[$\circ$] Used \textbf{historical emission data} to build \textbf{forecasting model} informing \textbf{short-term sustainability planning} and \textbf{
+       control}.
+       \item[$\circ$] Collaborated with global stakeholders including \textbf{H\&M, Zara, M\&S, and Gap} on sustainability goals and compliance initiatives.
+
+    \end{itemize}
+
+
+\medskip
+
+%==========================
+% TECHNICAL SKILLS & COURSES (tabular like screenshot)
+%==========================
+
+\shorterSection{Technical Skills \& Courses}
+\vspace{-1pt}
+\renewcommand{\arraystretch}{1.15}
+{\setlength{\tabcolsep}{6pt}%
+\noindent\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}p{3.2cm}|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Courses} &
+Probability \& Statistics, Statistical Modelling for Business Analytics, Intro to Computing, Applied Machine Learning, Data Mining \& knowledge Discovery, Operation Research, Research Methdology\\ \hline
+\textbf{Tools/Framework} &
+Python, SQL, Excel, Pandas, Numpy, Matplotlib, Scikit-Learn, TensorFlow, LangChain, Langraph, HuggingFace, Azure Open AI, VS Code, Jupyter Notebook. \\ \hline
+\textbf{Modeling Expertise} &
+Regression Analysis, Predictive Modeling, Clustering, Time Series Forecasting, Deep Learning (CNN, RNN, LSTM, Encoder–Decoder, Transformer), Transfer Learning \\ \hline
+\textbf{Soft Skills} &
+Communication, Leadership, Adaptability, Decision Making, Critical Thinking, Problem Solving \\ \hline
+\end{tabularx}
+}
+\vspace{4pt}
+
+%==========================
+% ACHIEVEMENTS & POSITION OF RESPONSIBILITIES
+%==========================
+\shorterSection{Achievements and Position of Responsibilities}
+\vspace{1pt}
+\begin{itemize}[leftmargin=*, topsep=0pt, itemsep=2pt]
+  \item Secured  \textbf{AIR 14} in \textbf{GATE 2024 (TF)} conducted by \textbf{IISc Banglore}.
+  \item \textbf{Admission Committee Volunteer} — Successfully managed and guided more than \textbf{250 students} throughout the entire admission process.
+  \item \textbf{Member of Alumni \& Corporate Relations} at IME, IITK (2024-Present).
+  \item \textbf{Teaching Assistant} — Assisted faculty members in conducting tutorials and evaluations for the \textbf{Probability \& Statistics} course.
+\end{itemize}
+
+
+
+
+%\shorterSection{Positions of Responsibility}
+%\begin{itemize}
+%\item \textbf{Senior Student Research Associate:} Enabling Intelligent And Interactive Grievance Analysis at the \textbf{Ministry of Defence}.
+%    \\[-0.6cm]
+%    \item \textbf{Teaching Assistant, IIT Kanpur:} Fundamentals Of Computing - I (ESC111A)
+ %   \\[-0.6cm]
+ %   \item \textbf{Co-founded} and assumed the role of team lead for the impactful \textbf{\href{https://collegecanteen.co.in}{College Canteen}} project, driving its inception, execution, and achievements.\\[-0.6cm]\end{itemize}
+% \vspace{-2mm}
+
+% \section{Relevant Courses}
+% \begin{tabular}{p{5cm}p{4cm}p{5cm}p{6cm}}
+% \ \ \ \ \  Introduction to ML & Data Mining  & Information Retrieval  & Internet Of Things
+% \\
+% \ \ \ \ \   Malware Analysis & Database System & Operating System  & Computer Networks
+% \\
+% \end{tabular}
+
+
+
+
+
+
+% \shorterSection{Scholastic Achievements}
+% \begin{itemize}
+% \item Secured \textbf{All India Rank 261} in \textbf{GATE CS 2020} amongst $97481$ candidates.
+% \item Selected for \textbf{Amazon ML Summer School 2021}. %- an integrated learning program on key Machine Leaning topics including Supervised learning, Deep Neural Networks, Dimensionality Reduction, Unsupervised Learning, Probabilistic Graphical Models, and Sequential Learning.
+% \item Received \textbf{Medha Samman}, an award for academic excellence for outstanding performance in Class \Romannum{12} Board exams. 
+% \end{itemize}
+% \medskip
+
+
+%-----------Position of Responsibility-----------------
+% \shorterSection{Positions of Responsibility}
+% \begin{itemize}
+% \item \textbf{Teaching Assistant :} Data Structures and Algorithms \hfill\hfill(\textit{Aug '21-Present})
+% \item \textbf{Teaching Assistant :} Introduction to Python Programming \hfill\hfill(\textit{Jul '21-Aug '21})
+% \item \textbf{Teaching Assistant :} Fundamental of Computing \hfill\hfill(\textit{Nov '20-Mar '21}) (\textit{Mar '21-Jul '21})
+% \vspace{2mm}
+% \end{itemize}
+% \vspace{-2mm}
+% -----------Courses and Skills-----------------
+% \shorterSection{Relevant Courses}
+% \begin{tabular}{p{8.4cm}p{6.5cm}p{5.5cm}}
+% \ \ \ \ \ \ \ \ \ \ Introduction to Machine Learning  &  Advanced Computer Architecture  &  Operating Systems
+% \\
+% \ \ \ \ \ \ \ \ \ \ Statistical Natural Language Processing   & Object Oriented Programming  &  Data Structures \& Algorithms
+% \\
+% \ \ \ \ \ \ \ \ \ \   Computational Genomics   & Data Mining  & Computer Networks 
+% \\
+% \ \ \ \ \ \ \ \ \ \   Database Management System   & Design and Analysis of Algorithms  & Mathematics 
+% \end{tabular}
+
+
+
+
+
+
+% % \shorterSection{Relevant Courses}
+% % \begin{itemize}
+% % \item \textbf{Postgraduate :} Introduction to Machine Learning, Statistical Natural Language Processing, Adv. Computer Architecture.
+% % \item \textbf{Undergraduate :} Data Structures and Algorithms, Operating Systems, Databases, Computer Networks, Mathematics.
+% % \end{itemize}
+% %-----------TECHNICAL SKILLS-----------------
+% \shorterSection{Technical Skills}
+% \begin{itemize}
+% \item \textbf{Languages :} C, C++, Python.
+% \item \textbf{Languages :} C, C++, Python, Java.
+% \item \textbf{ML Libraries:} Scikit-learn, Tensorflow, PyTorch.
+% \item \textbf{Familiar :} Numpy, Pandas.
+% \item \textbf{Utilities :} Git, \LaTeX, SQL.
+
+% \vspace{2mm}
+% \end{itemize}
+
+% \shorterSection{Relevant Courses and Technical Skills}
+% \begin{itemize}
+% \item \textbf{Courses :} Introduction to Machine Learning, Statistical Natural Language Processing, Advanced Computer Architecture, Data Structures \& Algorithms, Operating Systems, Computer Networks, Database Management System, Data Mining.
+% \item \textbf{Languages/ML Libraries/Utilities :} C, C++, Python, Scikit-learn, Tensorflow, PyTorch, SQL, \LaTeX, Git.
+% \end{itemize}
+
+
+% \vspace{-2mm}
+
+
+
+\end{document}
+
+% %-----------Addtional Experience & Achievements-----------------
+% \shorterSection{Additional Experience \& Achievements}
+%   \resumeSubHeadingListStart
+%   \small
+%     \item{Presented poster on \textit{Tiramisu DenseNet Architecture for Precise Segmentation} for Intel AI at \textbf{CVPR 2018}}
+%     \vspace{-5pt}
+%     \item{Selected as an \textbf{Intel AI Student Ambassador} (only 150 students) to research, publish, and share work on machine learning and deep learning}
+%     \vspace{-5pt}
+%     \item{Won \textit{Best Microsoft Hack} out of 220 teams at \textbf{HackHarvard 2017}}
+%     \vspace{-5pt}
+%     \item{Placed 16/50 at Google Games: Campus Edition 2017 at UIC}
+%     \vspace{-5pt}
+%     \item{Won \textit{Best Technical Innovation} award (out of 800 students) at \textbf{Amity University Convocation 2017}}
+%     \vspace{-5pt}
+%     \item{Elected as a \textit{Vice-Chair} for \textbf{ACM Amity Student Chapter} out of 800 students at Amity University based on high-achieving and technically strong undergraduate students}
+%   \resumeSubHeadingListEnd
+% %-------------------------------------------
+% \end{document}
