@@ -1,30 +1,121 @@
-Financial News Sentiment Analysis & Knowledge Graph
-Problem Statement: Financial news contains valuable insights that can influence investment and business decisions, but manually extracting sentiment and understanding relationships between entities is time-consuming. This project automates sentiment classification and builds an interactive Knowledge Graph to efficiently explore entities and their related news.
+Financial News Sentiment Analysis & Knowledge GraphA comprehensive system that combines financial news sentiment analysis with graph-based information retrieval, providing an interactive platform for exploring relationships between entities and related news records.📋 Problem StatementFinancial news contains valuable insights that can influence investment and business decisions, but manually extracting sentiment and understanding relationships between entities is time-consuming. This project automates sentiment classification and builds an interactive Knowledge Graph to efficiently explore entities and their related news.✨ Features📊 Exploratory Data Analysis & Sentiment Classification
 
-This project combines financial news sentiment analysis with graph-based information retrieval, providing an interactive system for exploring relationships between entities and related news records.
+Performed comprehensive EDA on 5,842 financial news records
+Classified news sentiment as positive, negative, or neutral
+Utilized NLTK for text preprocessing and TF-IDF vectorization for feature extraction
+Trained and evaluated multiple machine learning models:
 
-🔹 Features
-Exploratory Data Analysis & Sentiment Classification:
+Logistic Regression
+Linear SVC
+Random Forest
+Naive Bayes
 
-Performed EDA on 5,842 financial news records.
-Classified news as positive, negative, or neutral using NLTK for preprocessing and TF-IDF vectorization.
-Trained models like Logistic Regression, Linear SVC, Random Forest, and Naive Bayes with Stratified K-Fold cross-validation, achieving 70% accuracy and 0.71 F1-score (best with Logistic Regression).
-Deep Learning Sentiment Classifiers:
 
-Built LSTM, Bi-LSTM, and GRU classifiers using Word2Vec embeddings (gensim).
-Incorporated Dropout layers and Keras callbacks to prevent overfitting.
-Bi-LSTM achieved the best performance: 72% accuracy.
-Named Entity Recognition (NER) & Knowledge Graph:
+Implemented Stratified K-Fold cross-validation for robust evaluation
+Best Performance: Logistic Regression achieved 70% accuracy and 0.71 F1-score
+🧠 Deep Learning Sentiment Classifiers
 
-Extracted entities using spaCy.
-Constructed a Knowledge Graph in a Dockerized Neo4j container.
-Interactive Streamlit frontend allows users to query entities: for each query, the relevant subgraph is generated using Cypher, and corresponding news records are retrieved.
-🔹 Tech Stack
-Python, NLTK, TextBlob, spaCy
-Gensim (Word2Vec) for embeddings
-Neo4j + Cypher for graph database
-Docker for Neo4j containerization
-Streamlit for interactive frontend
-PyVis for graph visualization
-Pandas, NumPy for data handling
-🔹 Project Structure
+Built advanced neural network architectures:
+
+LSTM (Long Short-Term Memory)
+Bi-LSTM (Bidirectional LSTM)
+GRU (Gated Recurrent Unit)
+
+
+Leveraged Word2Vec embeddings using gensim for semantic word representations
+Incorporated Dropout layers to prevent overfitting
+Applied Keras callbacks for training optimization
+Best Performance: Bi-LSTM achieved 72% accuracy
+🕸️ Named Entity Recognition (NER) & Knowledge Graph
+
+Extracted financial entities (companies, people, organizations) using spaCy
+Constructed a comprehensive Knowledge Graph in a Dockerized Neo4j container
+Interactive Streamlit frontend enables intuitive entity querying
+For each query:
+
+Relevant subgraph is dynamically generated using Cypher queries
+Corresponding news records are retrieved and displayed
+
+
+Visual graph exploration using PyVis
+🛠️ Tech StackMachine Learning & NLP
+
+Python - Core programming language
+NLTK - Natural language preprocessing
+TextBlob - Sentiment analysis
+spaCy - Named Entity Recognition
+Gensim - Word2Vec embeddings
+scikit-learn - ML models and evaluation
+Deep Learning
+
+TensorFlow/Keras - Neural network frameworks
+LSTM, Bi-LSTM, GRU - Recurrent neural architectures
+Graph Database
+
+Neo4j - Graph database management
+Cypher - Graph query language
+Docker - Neo4j containerization
+Visualization & Frontend
+
+Streamlit - Interactive web interface
+PyVis - Graph visualization
+Matplotlib/Seaborn - Data visualization
+Data Processing
+
+Pandas - Data manipulation and analysis
+NumPy - Numerical computations
+📁 Project Structurefinancial-news-sentiment-kg/
+│
+├── data/
+│   ├── raw/                          # Raw financial news dataset
+│   ├── processed/                    # Cleaned and preprocessed data
+│   └── embeddings/                   # Word2Vec models
+│
+├── notebooks/
+│   ├── 01_eda.ipynb                 # Exploratory Data Analysis
+│   ├── 02_sentiment_ml.ipynb        # Traditional ML models
+│   ├── 03_sentiment_dl.ipynb        # Deep Learning models
+│   └── 04_ner_kg_construction.ipynb # Entity extraction & graph building
+│
+├── src/
+│   ├── preprocessing/
+│   │   ├── text_cleaner.py          # Text cleaning utilities
+│   │   └── feature_extraction.py    # TF-IDF and embedding utilities
+│   │
+│   ├── models/
+│   │   ├── ml_classifiers.py        # ML sentiment classifiers
+│   │   ├── dl_classifiers.py        # Deep learning models
+│   │   └── model_utils.py           # Training and evaluation utilities
+│   │
+│   ├── ner/
+│   │   └── entity_extractor.py      # Named Entity Recognition
+│   │
+│   ├── knowledge_graph/
+│   │   ├── graph_builder.py         # Neo4j graph construction
+│   │   ├── cypher_queries.py        # Predefined Cypher queries
+│   │   └── graph_utils.py           # Graph utility functions
+│   │
+│   └── visualization/
+│       └── graph_visualizer.py      # PyVis visualization
+│
+├── app/
+│   ├── streamlit_app.py             # Main Streamlit application
+│   ├── pages/
+│   │   ├── sentiment_analysis.py    # Sentiment analysis interface
+│   │   └── knowledge_graph.py       # Knowledge graph explorer
+│   └── utils/
+│       └── app_helpers.py           # Helper functions for app
+│
+├── docker/
+│   ├── docker-compose.yml           # Docker compose for Neo4j
+│   └── Dockerfile                   # Custom Docker configurations
+│
+├── tests/
+│   ├── test_preprocessing.py
+│   ├── test_models.py
+│   └── test_graph.py
+│
+├── requirements.txt                  # Python dependencies
+├── README.md                         # Project documentation
+├── .gitignore
+└── LICENSE
